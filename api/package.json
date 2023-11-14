@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "testing api",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "rm -rf reports && mkdir -p reports && cucumber-js tests/features/**/* --require cucumber.conf.js --require tests/stepDefinitions/*.js --format @cucumber/pretty-formatter --format json:./reports/cucumber-report.json --format html:./reports/cucumber-report.html --format html:./reports/cucumber-report.html --format json:./reports/cucumber-report.json --publish-quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hadiyanto/pnt-test.git"
+  },
+  "author": "hadiyanto.hanasil@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hadiyanto/pnt-test/issues"
+  },
+  "homepage": "https://github.com/Hadiyanto/pnt-test#readme",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "@cucumber/cucumber": "^7.3.2",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "supertest": "^6.3.3"
+  }
+}
