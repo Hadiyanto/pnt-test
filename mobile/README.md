@@ -27,8 +27,8 @@ appium
 adb devices
 ```
 
-Update appium:deviceName file mobile/cucumber.conf.js line 18
-Update appium:app with your Sample Android App - Login Tes_4.0_Apkpure.apk directory
+Update appium:deviceName file mobile/cucumber.conf.js line 18 (https://github.com/Hadiyanto/pnt-test/blob/4502c6a3c37b44c3dcb61bb774539a8b08772485/mobile/cucumber.conf.js#L18)
+Update appium:app with your Sample Android App - Login Tes_4.0_Apkpure.apk directory (https://github.com/Hadiyanto/pnt-test/blob/4502c6a3c37b44c3dcb61bb774539a8b08772485/mobile/cucumber.conf.js#L17)
 
 4. Open new tab terminal for running the test
 
