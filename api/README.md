@@ -8,6 +8,11 @@
 ## Usage
 
 ```
+cd api
 npm install
 npm test -- --tags '@test'
 ```
+
+## Report
+
+Please check json and html report on reports directory

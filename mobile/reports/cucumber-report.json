@@ -1,0 +1,976 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-login;login-success",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Login Success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 13402000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1023000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user register with valid data",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6287000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "validate user success register",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user login with previous registered email",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3339000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "validate user success login",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 651000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 920000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@positive",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-login;login-invalid-password-or-email",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Login Invalid Password or email",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12566000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "user login with email \"admib@gmail.com\" and password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "validate error message invalid email or password is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 670000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 366000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-login;login-failed",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Login failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11810000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "user login with email \"admin.com\" and password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3791000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "validate error message empty required is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 411000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-login;login-failed",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Login failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8631000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "user login with email \"admin@email.com\" and password \"\"",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3456000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "validate error message empty required is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 494000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-login;login-failed",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Login failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9277000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "user login with email \"\" and password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3151000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "validate error message empty required is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 607000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 708000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-login",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Login",
+    "tags": [
+      {
+        "name": "@test",
+        "line": 1
+      },
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-register;register-success",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Register Success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9918000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 801000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user register with valid data",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5984000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "validate user success register",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 682000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@positive",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-register;register-failed",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Register failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8525000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 559000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user register with full name \"\", email \"\", password \"\" and confirm password \"\"",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6098000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "validate error message \"all\" is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 251000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 349000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-register;register-failed",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Register failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9378000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1455000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user register with full name \"\", email \"testing@email.com\", password \"Welcome123\" and confirm password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5109000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "validate error message \"full name\" is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 295000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-register;register-failed",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Register failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11350000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 764000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 302000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user register with full name \"hadiyanto\", email \"\", password \"\" and confirm password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6433000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "validate error message \"email\" is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1235000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-register;register-failed",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Register failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11685000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 812000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user register with full name \"hadiyanto\", email \"testing@email.com\", password \"\" and confirm password \"Welcome123\"",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5840000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "validate error message \"password\" is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 334000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-register;register-failed",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Register failed",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6681000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user on login page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 551000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user go to register page",
+            "match": {
+              "location": "tests/stepDefinitions/login-steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user register with full name \"hadiyanto\", email \"testing@email.com\", password \"Welcome123\" and confirm password \"\"",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "validate error message \"confirm password\" is displayed",
+            "match": {
+              "location": "tests/stepDefinitions/register-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-register",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test Register",
+    "tags": [
+      {
+        "name": "@test",
+        "line": 1
+      },
+      {
+        "name": "@register",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/register.feature"
+  }
+]

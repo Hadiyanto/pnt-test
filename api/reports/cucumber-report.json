@@ -1,0 +1,217 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-api;example-get-method",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Example Get Method",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user send GET request to \"/posts\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "user validate response code is 200",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "type of value response body \"userId\" should be \"integer\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "type of value response body \"id\" should be \"integer\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "type of value response body \"title\" should be \"string\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "type of value response body \"body\" should be \"string\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@get",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-api;example-post-method",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Example Post Method",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "user send POST request to \"/posts\" with body \"default\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 361000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "user validate response code is 201",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "value of response body \"title\" should be \"recommendation\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "value of response body \"body\" should be \"motorcycle\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "value of response body \"userId\" should be \"12\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@post",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-api",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Test API",
+    "tags": [
+      {
+        "name": "@test",
+        "line": 1
+      }
+    ],
+    "uri": "tests/features/test.feature"
+  }
+]

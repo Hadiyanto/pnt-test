@@ -11,7 +11,6 @@ Given("user send POST request to {string} with body {}", async function(
   body
 ) {
   await console.log("POST Request");
-  await console.log(body);
   let postBody;
   if (body == '"default"') {
     postBody = {
@@ -26,8 +25,6 @@ Given("user send POST request to {string} with body {}", async function(
 });
 
 Then("user validate response code is {int}", async function(value) {
-  await console.log(value);
-  await console.log(response.status);
   await expect(response.status).equal(value);
 });
 
@@ -59,9 +56,6 @@ Then("value of response body {string} should be {string}", async function(
   expected_key,
   expected_value
 ) {
-  console.log(expected_key);
-  console.log(expected_value);
-  console.log(response.body[expected_key]);
   if (typeof response.body[expected_key] == "string") {
     expect(response.body[expected_key]).equal(expected_value);
   } else if (typeof response.body[expected_key] == "number") {
