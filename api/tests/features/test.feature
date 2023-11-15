@@ -21,4 +21,17 @@ Feature: Test API
             | title          | body       | userId |
             | recommendation | motorcycle | 12     |
 
+    @post
+    Scenario Outline: Example Post Method with update body
+        Given user send POST request to "/posts" with title "<title>", body "<body>" and userId "<userId>"
+        Then user validate response code is 201
+        And value of response body "title" should be "<title>"
+        And value of response body "body" should be "<body>"
+        And value of response body "userId" should be "<userId>"
+        Examples:
+            | title         | body         | userId |
+            | testing       | postdata     | 120    |
+            | title testing | body testing | 11     |
+
+
 

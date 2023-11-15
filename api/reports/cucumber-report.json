@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 154000000
+              "duration": 101000000
             }
           },
           {
@@ -36,7 +36,7 @@
             "line": 7,
             "name": "user validate response code is 200",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:28"
+              "location": "tests/stepDefinitions/api_steps.js:41"
             },
             "result": {
               "status": "passed",
@@ -49,11 +49,11 @@
             "line": 8,
             "name": "type of value response body \"userId\" should be \"integer\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:34"
+              "location": "tests/stepDefinitions/api_steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 42000000
+              "duration": 39000000
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 9,
             "name": "type of value response body \"id\" should be \"integer\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:34"
+              "location": "tests/stepDefinitions/api_steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 22000000
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 10,
             "name": "type of value response body \"title\" should be \"string\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:34"
+              "location": "tests/stepDefinitions/api_steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 13000000
             }
           },
           {
@@ -88,11 +88,11 @@
             "line": 11,
             "name": "type of value response body \"body\" should be \"string\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:34"
+              "location": "tests/stepDefinitions/api_steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 6000000
             }
           }
         ],
@@ -120,7 +120,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -133,7 +133,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 361000000
+              "duration": 331000000
             }
           },
           {
@@ -142,11 +142,11 @@
             "line": 16,
             "name": "user validate response code is 201",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:28"
+              "location": "tests/stepDefinitions/api_steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 0
             }
           },
           {
@@ -155,7 +155,7 @@
             "line": 17,
             "name": "value of response body \"title\" should be \"recommendation\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:58"
+              "location": "tests/stepDefinitions/api_steps.js:69"
             },
             "result": {
               "status": "passed",
@@ -168,7 +168,7 @@
             "line": 18,
             "name": "value of response body \"body\" should be \"motorcycle\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:58"
+              "location": "tests/stepDefinitions/api_steps.js:69"
             },
             "result": {
               "status": "passed",
@@ -181,7 +181,7 @@
             "line": 19,
             "name": "value of response body \"userId\" should be \"12\"",
             "match": {
-              "location": "tests/stepDefinitions/api_steps.js:58"
+              "location": "tests/stepDefinitions/api_steps.js:69"
             },
             "result": {
               "status": "passed",
@@ -197,6 +197,192 @@
           {
             "name": "@post",
             "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-api;example-post-method-with-update-body",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Example Post Method with update body",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "user send POST request to \"/posts\" with title \"testing\", body \"postdata\" and userId \"120\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 842000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "user validate response code is 201",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "value of response body \"title\" should be \"testing\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "value of response body \"body\" should be \"postdata\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "value of response body \"userId\" should be \"120\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@post",
+            "line": 24
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-api;example-post-method-with-update-body",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Example Post Method with update body",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "user send POST request to \"/posts\" with title \"title testing\", body \"body testing\" and userId \"11\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 328000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "user validate response code is 201",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "value of response body \"title\" should be \"title testing\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "value of response body \"body\" should be \"body testing\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "value of response body \"userId\" should be \"11\"",
+            "match": {
+              "location": "tests/stepDefinitions/api_steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test",
+            "line": 1
+          },
+          {
+            "name": "@post",
+            "line": 24
           }
         ],
         "type": "scenario"

@@ -6,7 +6,7 @@ Given("user send GET request to {string}", async function(path) {
   await api.performGetRequest(path);
 });
 
-Given("user send POST request to {string} with body {}", async function(
+Given("user send POST request to {string} with body {string}", async function(
   path,
   body
 ) {
@@ -23,6 +23,20 @@ Given("user send POST request to {string} with body {}", async function(
   }
   await api.performPostRequest(path, postBody);
 });
+
+Given(
+  "user send POST request to {string} with title {string}, body {string} and userId {string}",
+  async function(path, title, body, userId) {
+    // Write code here that turns the phrase above into concrete actions
+    await console.log("POST Request");
+    let postBody = {
+      title: title,
+      body: body,
+      userId: parseInt(userId),
+    };
+    await api.performPostRequest(path, postBody);
+  }
+);
 
 Then("user validate response code is {int}", async function(value) {
   await expect(response.status).equal(value);
