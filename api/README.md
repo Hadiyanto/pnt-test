@@ -1,4 +1,4 @@
-# pnt-test
+# pnt-test-api
 
 ## Prerequisite
 
@@ -7,6 +7,7 @@
 
 ## Usage
 
-for running api test please follow instruction on the link
-
-for running mobile test please follow instruction on the link
+```
+npm install
+npm test -- --tags '@test'
+```
