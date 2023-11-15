@@ -20,7 +20,17 @@ appium driver install uiautomator2
 appium
 ```
 
-2. Open new tab terminal for running the test
+2. Running emulator
+3. update device name and directory apk
+
+```
+adb devices
+```
+
+Update appium:deviceName file mobile/cucumber.conf.js line 18
+Update appium:app with your Sample Android App - Login Tes_4.0_Apkpure.apk directory
+
+4. Open new tab terminal for running the test
 
 ```
 cd mobile
