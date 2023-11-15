@@ -9,4 +9,4 @@
 
 for running api test please follow instruction on the link https://github.com/Hadiyanto/pnt-test/blob/main/api/README.md
 
-for running mobile test please follow instruction on the link
+for running mobile test please follow instruction on the link https://github.com/Hadiyanto/pnt-test/blob/main/mobile/README.md
